@@ -63,7 +63,7 @@ a {
   text-decoration: none;
 }
 
-/****** Container ***********/
+/****** Header et info group ***********/
 .container h2 {
   line-height: 30px;
 }
@@ -169,6 +169,19 @@ a {
   margin-right: 10px;
 }
 
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+  background-color: var(--main-bg-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
 .section-title {
   margin: 0;
   font-size: 22px;
@@ -207,19 +220,6 @@ a {
 
 .neutral-star {
   color: var(--main-bg-color);
-}
-
-/****** Hebergements And Populaires ***********/
-.hebergements-and-populaires {
-  display: flex;
-  justify-content: space-between;
-}
-
-.hebergements-and-populaires section {
-  background-color: var(--main-bg-color);
-  border-radius: 20px;
-  padding: 30px;
-  box-sizing: border-box;
 }
 
 /****** Hebergements ***********/
