@@ -16,6 +16,7 @@
 body {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .main-container {
@@ -24,6 +25,15 @@ body {
   padding: 0 50px;
   box-sizing: border-box;
 }
+
+h1 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
 /****** Header ***********/
 header {
   display: flex;
@@ -41,6 +51,7 @@ header img {
 header nav {
   display: flex;
   gap: 68px;
+  margin-top: 3px;
 }
 
 header nav a {
@@ -61,6 +72,7 @@ header nav a:hover {
 a {
   color: inherit;
   text-decoration: none;
+  width: 100%;
 }
 
 /****** Header et info group ***********/
@@ -173,6 +185,8 @@ a {
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  gap: 40px;
 }
 
 .hebergements-and-populaires section {
@@ -200,13 +214,14 @@ a {
   border-radius: 20px;
   padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  width: 100%;
 }
 
 .card img {
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
   background: url("images/hebergements"), lightgray 50% / cover no-repeat;
-  width: 250.33px;
+  width: 100%;
   height: 124px;
 }
 
@@ -226,23 +241,24 @@ a {
 
 .hebergements-cards {
   display: grid;
-  grid-template-columns: 250px 250px 250px;
+  grid-template-columns: 30% 30% 30%;
   gap: 30px;
 }
 
 .hebergements-cards .card {
-  width: 250.33px;
   height: 207.25px;
 }
 
 .hebergements {
-  width: 871px;
+  width: 68%;
 }
 
 .hotel-info h3,
 .hotel-info p {
   display: flex;
   margin: 0px 15px 8px 15px;
+  font-size: 16px;
+  width: 100%;
 }
 
 .card i:first-of-type {
@@ -339,7 +355,6 @@ a {
 }
 
 .activites-card img {
-  width: 297.5px;
   height: 380px;
 }
 
@@ -347,6 +362,7 @@ a {
   padding: 20px 19px 20px 19px;
   border-radius: 0px 0px 20px 20px;
   gap: 10px;
+  margin: 0px;
 }
 
 .activites-title {
@@ -377,6 +393,10 @@ ul {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+  .main-container {
+    padding: 0 20px;
+  }
+
   .hebergements-and-populaires {
     flex-direction: column;
   }
@@ -419,6 +439,7 @@ ul {
 
   .filterbar {
     padding-top: 20px;
+    width: 100%;
   }
 
   .search-bar {
@@ -430,15 +451,20 @@ ul {
   }
 
   .hebergements-cards {
-    gap: 20px;
+    gap: 30px;
+  }
+
+  .activites {
+    margin: 0px;
   }
 
   .activites-card {
     gap: 20px;
+    display: flex;
+    justify-content: space-around;
   }
 
   .card-title {
-    width: 155px;
     height: 19px;
     display: flex;
     flex-direction: column-reverse;
@@ -446,31 +472,35 @@ ul {
 
   .activites-card img {
     height: 200px;
-    width: 193px;
+    width: 100%;
   }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   /* ... */
+
+  body {
+    width: 100%;
+    margin: auto;
+  }
+
   .main-container {
-    padding: 0 20px;
+    padding: 0px;
   }
 
   .container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 8px;
   }
 
   .container h2 {
-    width: 335px;
     height: 25px;
   }
 
   .container p {
-    width: 335px;
     height: 19px;
   }
 
@@ -486,10 +516,10 @@ ul {
   }
 
   header nav {
-    align-items: center;
     display: flex;
-    justify-content: space-between;
     width: 100%;
+    gap: 0px;
+    justify-content: space-around;
   }
 
   header nav a:hover {
@@ -506,6 +536,10 @@ ul {
     display: flex;
     justify-content: center;
     margin: 0px -15px 0px -15px;
+    text-decoration: none;
+    border-bottom: 0.125rem solid #f2f2f2;
+    padding-bottom: 0.875rem;
+    width: 50%;
   }
 
   .search-bar {
@@ -552,6 +586,7 @@ ul {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    width: 335px;
   }
 
   .buttonfilterbar {
@@ -560,10 +595,9 @@ ul {
 
   .filterbar {
     padding-top: 20px;
-    width: 100%;
     display: grid;
-    grid-template-columns: 100%;
     gap: 20px;
+    justify-content: center;
   }
 
   .filterbar h3 {
@@ -574,6 +608,11 @@ ul {
     margin-top: 30px;
     margin-bottom: 30px;
   }
+
+  .hebergements {
+    background-color: none;
+  }
+
   .hebergements-cards {
     grid-template-columns: 100%;
     gap: 20px;
@@ -601,10 +640,16 @@ ul {
     width: 100%;
   }
 
+  .activites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .activites-card {
     display: flex;
     gap: 20px;
-    width: 100%;
+    width: 335px;
     flex-direction: column;
   }
 
@@ -622,12 +667,11 @@ ul {
 
   .footer {
     display: flex;
-    flex-direction: column;
     margin-left: -27px;
     margin-right: -27px;
-  }
-
-  .apropos1 {
-    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    width: 101%;
+    align-items: flex-start;
   }
 }
